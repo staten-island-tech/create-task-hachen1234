@@ -1,15 +1,19 @@
 const dom = {
   roll: document.querySelector(".roll"),
+  h1: document.querySelector(".text"),
+  input: document.querySelector(".yournumber"),
+  output: document.querySelector(".thedicenumber"),
 };
-const guess = prompt("enter number 1-6 ");
-const diceresult = Math.floor(Math.random() * 6) + 1;
-console.log(diceresult);
 dom.roll.addEventListener("click", function () {
-  if (guess === diceresult) {
-    document.getElementsByClassName("text").textContent = "your right";
+  let guess = prompt("enter number 1-6 ");
+  dom.input.innerHTML = guess;
+  let diceresult = Math.floor(Math.random() * 6) + 1;
+  dom.output.innerHTML = diceresult;
+  if (guess == diceresult) {
+    dom.h1.innerHTML = "your right";
   } else if (guess > diceresult) {
-    document.getElementsByClassName("text").textContent = "you rolled higher";
+    dom.h1.innerHTML = "you guessed higher";
   } else if (guess < diceresult) {
-    document.getElementsByClassName("text").textContent = "you rolled lower";
+    dom.h1.innerHTML = "you guessed lower";
   }
 });
