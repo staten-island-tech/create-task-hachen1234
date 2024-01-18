@@ -21,5 +21,5 @@ dom.roll.addEventListener("click", function () {
     dom.h1.innerHTML = "you guessed lower";
     history.push("you guessed lower");
   }
+  dom.historylist.innerHTML = history;
 });
-console.log(history);
