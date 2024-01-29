@@ -4,7 +4,9 @@ const dom = {
   input: document.querySelector(".yournumber"),
   output: document.querySelector(".thedicenumber"),
   historylist: document.querySelector(".history"),
+  historybtn: document.querySelector(".historybtn"),
 };
+
 const history = [];
 dom.roll.addEventListener("click", function () {
   let guess = prompt("enter number 1-6 ");
@@ -21,5 +23,18 @@ dom.roll.addEventListener("click", function () {
     dom.h1.innerHTML = "you guessed lower";
     history.push("you guessed lower");
   }
-  dom.historylist.innerHTML = history;
 });
+function display(history) {
+  for (let i = 0; i < history.length; i++) {
+    if (i > 0) {
+      dom.historylist.insertAdjacentHTML(
+        "afterbegin",
+        ` <div class="check"> ${history[i - 1]}</div>`
+      );
+    } else {
+      dom.historylist.innerHTML = "";
+    }
+  }
+}
+
+dom.historybtn.addEventListener("click", () => display(history));
