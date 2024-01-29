@@ -29,7 +29,7 @@ function display(history) {
     if (i > 0) {
       dom.historylist.insertAdjacentHTML(
         "afterbegin",
-        ` <div class="check"> ${history[i - 1]}</div>`
+        ` <div class="check"> ${history[i]}</div>`
       );
     } else {
       dom.historylist.innerHTML = "";
