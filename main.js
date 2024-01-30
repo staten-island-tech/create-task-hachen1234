@@ -6,7 +6,6 @@ const dom = {
   historylist: document.querySelector(".history"),
   historybtn: document.querySelector(".historybtn"),
 };
-
 const history = [];
 dom.roll.addEventListener("click", function () {
   let guess = prompt("enter number 1-6 ");
@@ -29,12 +28,11 @@ function display(history) {
     if (i > 0) {
       dom.historylist.insertAdjacentHTML(
         "afterbegin",
-        ` <div class="check"> ${history[i]}</div>`
+        ` <div class="list"> ${history[i - 1]}</div>`
       );
     } else {
       dom.historylist.innerHTML = "";
     }
   }
 }
-
 dom.historybtn.addEventListener("click", () => display(history));

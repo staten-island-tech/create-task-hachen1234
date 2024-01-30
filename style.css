@@ -1,3 +1,33 @@
+body,
+html,
+* {
+  font-size: 10px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 .roll {
-  font-size: 20px;
+  font-size: 2rem;
+}
+.historybtn {
+  font-size: 2rem;
+}
+h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.yournumber {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+.thedicenumber {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+label {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+.list {
+  font-size: 2rem;
 }
