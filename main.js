@@ -28,7 +28,7 @@ function display(history) {
     if (i > 0) {
       dom.historylist.insertAdjacentHTML(
         "afterbegin",
-        ` <div class="list"> ${history[i - 1]}</div>`
+        ` <div class="list">${i} ${history[i - 1]}</div>`
       );
     } else {
       dom.historylist.innerHTML = "";
